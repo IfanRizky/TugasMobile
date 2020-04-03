@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".MainActivity2">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pendaftaran Berhasil"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
+            android:textStyle="bold|italic"/>
+
+        <TextView
+            android:id="@+id/textNamaDepan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Nama Depan:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textNamaBelakang2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Nama Belakang:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textTTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Tempat Tanggal Lahir:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textAlamat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Alamat:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textJenisKelamin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Jenis Kelamin:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textAgama2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Agama:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textNoTelp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Nomor Telepon:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textEmail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Email:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="7dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnKeluar"
+                    android:layout_width="170dp"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="KELUAR APLIKASI"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="15dp"
+                    android:textColor="@color/txtColor"
+                    android:layout_marginBottom="7dp"></Button>
+
+                <Button
+                    android:id="@+id/btnOk"
+                    android:layout_width="170dp"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="190dp"
+                    android:layout_marginLeft="1dp"
+                    android:text="OKE"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="15dp"
+                    android:textColor="@color/txtColor"
+                    android:layout_marginBottom="7dp"></Button>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 </ScrollView>
