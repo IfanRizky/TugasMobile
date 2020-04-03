@@ -3,13 +3,17 @@ package com.example.tugasmobile;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
@@ -44,6 +48,39 @@ public class MainActivity extends AppCompatActivity {
         String myFormat = "dd-MM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         textInputTglLahir.setText(sdf.format(myCalendar.getTime()));
+    }
+
+    private void showDialog() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        //Set Title Dialog
+        alertDialogBuilder.setTitle("Konfirmasi...");
+
+        //Set Pesan Dialog
+        alertDialogBuilder
+                .setMessage("Apakah data yang Anda masukkan sudah benar?")
+                .setIcon(R.mipmap.ic_launcher)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        //Jika tombol diklik, maka akan ke activity 2
+                        Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(i);
+                    }
+                })
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        //Jika tombol diklik, akan menutup dialog dan tak terjadi apa-apa
+                        dialog.cancel();
+                    }
+                });
+
+        //Membuat Alert Dialog dari Builder
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        //Menampilkan Alert Dialog
+        alertDialog.show();
     }
 
     @Override
@@ -116,6 +153,31 @@ public class MainActivity extends AppCompatActivity {
                 new DatePickerDialog(MainActivity.this, date, myCalendar.get(Calendar.YEAR),
                         myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
+        });
+
+        getBtnDaftar = (Button) findViewById(R.id.btnDaftar);
+        getBtnDaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //ShowDialog
+                if (awesomeValidation.validate()) {
+                    showDialog();
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Mohon isi Data Yang Kosong", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+//        textInputTglLahir.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(MainActivity.this,
+//                        "Tanggal :" + textInputTglLahir.getEditText().toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
+
+
         });
     }
 }
