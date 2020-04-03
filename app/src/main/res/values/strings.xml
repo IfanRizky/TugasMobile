@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">TugasMobile</string>
+    <string name="app_name">Ifan - 085</string>
+    <string name="labelapp">PENDAFTARAN</string>
+    <string name="nmdepan">Nama Depan</string>
+    <string name="nmblkng">Nama Belakang</string>
+    <string name="tmptlahir">Tempat Lahir</string>
+    <string name="tgllahir">Tanggal Lahir</string>
+    <string name="almt">Alamat</string>
+    <string name="jnskelamin">Jenis Kelamin</string>
+    <string name="agama">Agama</string>
+    <string name="tlp">Telepon</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="repass">Masukkan Password Kembali</string>
+    <string name="btnkemabli">KEMBALI</string>
+    <string name="btndaftar">DAFTAR</string>
+
+    <string name="labelapp2">PENDAFTARAN</string>
+    <string name="nmdepan2">Nama Depan</string>
+    <string name="nmblkng2">Nama Belakang</string>
+    <string name="tmptlahir2">Tempat Lahir</string>
+    <string name="tgllahir2">Tanggal Lahir</string>
+    <string name="almt2">Alamat</string>
+    <string name="jnskelamin2">Jenis Kelamin</string>
+    <string name="agama2">Agama</string>
+    <string name="tlp2">Telepon</string>
+    <string name="email2">Email</string>
+    <string name="btnkeLUAR">KELUAR APLIKASI</string>
+    <string name="btnOK">OKE</string>
 </resources>
