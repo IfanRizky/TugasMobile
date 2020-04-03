@@ -27,4 +27,10 @@
     <string name="email2">Email</string>
     <string name="btnkeLUAR">KELUAR APLIKASI</string>
     <string name="btnOK">OKE</string>
+    <string name="invalid_name">Mohon diisi dahulu!</string>
+    <string name="invalid_number">Diisi 12 digit</string>
+    <string name="invalid_email">Format Email Salah</string>
+    <string name="invalid_password">Password Salah</string>
+    <string name="invalid_confirm">Password Salah</string>
+    <string name="invalid_pass">Masukkan 9 digit</string>
 </resources>
