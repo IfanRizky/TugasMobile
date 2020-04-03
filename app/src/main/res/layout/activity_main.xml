@@ -1,18 +1,331 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textViewjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="PENDAFTARAN"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
+            android:textStyle="bold|italic"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputNamaDepan"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/nmdepan"
+                        android:inputType="textPersonName">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputNamaBelakang"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nmblkng"
+                        android:inputType="textPersonName">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputTempatLahir"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tmptlahir"
+                        android:inputType="text">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputTglLahir"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/tgllahir"
+                        android:inputType="date">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/almt"
+                android:inputType="text"
+                android:layout_marginTop="70dp">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textJenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/jnskelamin"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17dp">
+        </TextView>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TableRow>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="5dp">
+                    <RadioButton
+                        android:id="@+id/radioLaki"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Laki-Laki"
+                        android:layout_marginRight="35dp">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioPerempuan"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Perempuan"
+                        android:layout_marginRight="50dp">
+                    </RadioButton>
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textAgama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/agama"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17dp">
+        </TextView>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+            <TableRow>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="5dp">
+                    <RadioButton
+                        android:id="@+id/radioIslam"
+                        android:layout_width="115dp"
+                        android:layout_marginRight="90dp"
+                        android:layout_height="match_parent"
+                        android:text="Islam">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioKristen"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Katolik">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioKatolik"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Buddha">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioHindu"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Aliran Kepercayaan">
+                    </RadioButton>
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="5dp">
+                    <RadioButton
+                        android:id="@+id/radioBuddha"
+                        android:layout_width="105dp"
+                        android:layout_height="match_parent"
+                        android:text="Kristen"
+                        android:layout_marginRight="110dp">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioKonghucu"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Hindhu"
+                        android:layout_marginRight="90dp">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioKepercayaan"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:text="Konghucu"
+                        android:layout_marginRight="90dp">
+                    </RadioButton>
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputTelepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tlp"
+                android:inputType="phone"
+                android:layout_marginTop="10dp">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="10dp">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputRepassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/repass"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="7dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnKembali"
+                    android:layout_width="170dp"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kembali"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="7dp"></Button>
+
+                <Button
+                    android:id="@+id/btnDaftar"
+                    android:layout_width="170dp"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="190dp"
+                    android:layout_marginLeft="1dp"
+                    android:text="Daftar"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="7dp"></Button>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
